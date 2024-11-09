@@ -1,12 +1,12 @@
 var eventTime = null
 // Uncomment the following line and specify your even time in GMT format similar to the example
-// eventTime = new Date("29 April 2022 9:56:00 GMT+01:00");		
+// eventTime = new Date("29 April 2022 9:56:00 GMT+01:00");     
 
 $( document ).ready(function() {
     setInterval(function() { countdown(); }, 1000);
 });
 
-function countdown() {	
+function countdown() {  
     if(!eventTime) {
       eventTime = new Date()
       eventTime.setHours(eventTime.getHours() + 60);
@@ -29,14 +29,14 @@ function countdown() {
     if (seconds < "10") { seconds = "0" + seconds; }
 
     if (days == 1) {
-      $("#days").html(days + "<span>Day</span>");
+      $("#days").html(days + "<span>Día</span>");
     }
     else if (days > 0) {
-      $("#days").html(days + "<span>Days</span>");
+      $("#days").html(days + "<span>Días</span>");
     } else {
       $('#days').hide()
     }
-    $("#hours").html(hours + "<span>Hours</span>");
-    $("#minutes").html(minutes + "<span>Minutes</span>");
-    $("#seconds").html(seconds + "<span>Seconds</span>");		
-  }
+    $("#hours").html(hours + "<span>Horas</span>");
+    $("#minutes").html(minutes + "<span>Minutos</span>");
+    $("#seconds").html(seconds + "<span>Segundos</span>");      
+}
